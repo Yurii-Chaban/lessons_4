@@ -1,0 +1,31 @@
+<%= form_with model: @cat, local: true do |form| %>
+
+    <% if @cat.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@cat.errors.count, "error") %> prohibited
+            this cat from being saved:
+          </h2>
+          <ul>
+            <% @cat.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :how_to_call_a_kitten %><br>
+      <%= form.text_area :how_to_call_a_kitten %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+
+<% end %>

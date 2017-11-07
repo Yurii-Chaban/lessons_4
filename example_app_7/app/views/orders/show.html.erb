@@ -1,0 +1,18 @@
+<p>
+  <strong>Product one:</strong>
+  <%= @order.product_one %>
+</p>
+
+<p>
+  <strong>Product two:</strong>
+  <%= @order.product_two %>
+</p>
+
+<p>
+  <strong>Product three:</strong>
+  <%= @order.product_tree %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'All orders', orders_path %>
+<%= link_to 'New order', new_order_path %>

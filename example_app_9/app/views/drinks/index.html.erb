@@ -1,0 +1,25 @@
+<h1>Listing drinks</h1>
+
+<%= link_to 'New drink', new_drink_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Years</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+
+  <% @drinks.each do |drink| %>
+      <tr>
+        <td><%= drink.name %></td>
+        <td><%= drink.years %></td>
+        <td><%= drink.price %></td>
+        <td><%= link_to 'Show', drink_path(drink) %></td>
+        <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+        <td><%= link_to 'Drink', drink_path(drink),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>

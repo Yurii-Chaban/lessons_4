@@ -1,0 +1,13 @@
+<p>
+  <strong>Field Name:</strong>
+  <%= @field.field %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @field.description %>
+</p>
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'All fields', fields_path %>
+<%= link_to 'New field', new_field_path %>

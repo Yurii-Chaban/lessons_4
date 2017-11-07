@@ -1,0 +1,13 @@
+<p>
+  <strong>Name:</strong>
+  <%= @candy.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @candy.description %>
+</p>
+
+<%= link_to 'Edit', edit_candy_path(@candy) %> |
+<%= link_to 'All candies', candies_path %>
+<%= link_to 'New candy', new_candy_path %>

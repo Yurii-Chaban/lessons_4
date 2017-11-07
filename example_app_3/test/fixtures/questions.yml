@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  field_categoryee: MyString
+  field: MyText
+  answer: MyText
+
+two:
+  field_categoryee: MyString
+  field: MyText
+  answer: MyText

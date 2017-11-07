@@ -1,0 +1,25 @@
+<h1>Listing orders</h1>
+
+<%= link_to 'New order', new_order_path %>
+
+<table>
+  <tr>
+    <th>Product one</th>
+    <th>Product two</th>
+    <th>Product three</th>
+    <th></th>
+  </tr>
+
+  <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.product_one %></td>
+        <td><%= order.product_two %></td>
+        <td><%= order.product_tree %></td>
+        <td><%= link_to 'Show', order_path(order) %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Delete', order_path(order),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>

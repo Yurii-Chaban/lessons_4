@@ -1,0 +1,23 @@
+<h1>Listing candies</h1>
+
+<%= link_to 'New candy', new_candy_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+
+  <% @candies.each do |candy| %>
+      <tr>
+        <td><%= candy.name %></td>
+        <td><%= candy.description %></td>
+        <td><%= link_to 'Show', candy_path(candy) %></td>
+        <td><%= link_to 'Edit', edit_candy_path(candy) %></td>
+        <td><%= link_to 'Destroy', candy_path(candy),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>

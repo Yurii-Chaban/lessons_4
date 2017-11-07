@@ -1,0 +1,13 @@
+<p>
+  <strong>Name:</strong>
+  <%= @cat.name %>
+</p>
+
+<p>
+  <strong>How to call a kitten:</strong>
+  <%= @cat.how_to_call_a_kitten %>
+</p>
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'All cats', cats_path %>
+<%= link_to 'New cat', new_cat_path %>

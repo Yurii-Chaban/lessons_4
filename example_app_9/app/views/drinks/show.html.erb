@@ -1,0 +1,18 @@
+<p>
+  <strong>Product one:</strong>
+  <%= @drink.name %>
+</p>
+
+<p>
+  <strong>Product two:</strong>
+  <%= @drink.years %>
+</p>
+
+<p>
+  <strong>Product three:</strong>
+  <%= @drink.price %>
+</p>
+
+<%= link_to 'Edit', edit_drink_path(@drink) %> |
+<%= link_to 'All drinks', drinks_path %>
+<%= link_to 'New drink', new_drink_path %>
